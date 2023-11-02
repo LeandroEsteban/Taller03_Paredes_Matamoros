@@ -29,8 +29,12 @@ public class Menu {
                 case 2:
                     for (Sucursal sucursal : empresa.getSucursales()) {
                         System.out.println("Camiones en la sucursal " + sucursal.getCodigo() + ":");
-                        for (Camion camion : sucursal.getCamiones()) {
-                            System.out.println("Codigo camion: " + camion.getCodigoCamion());
+                        if (sucursal.getCamiones().isEmpty()) {
+                            System.out.println("No hay camiones.");
+                        } else {
+                            for (Camion camion : sucursal.getCamiones()) {
+                                System.out.println("Codigo camion: " + camion.getCodigoCamion());
+                            }
                         }
                     }
                     break;
@@ -56,8 +60,10 @@ public class Menu {
                 case 4:
                     System.out.println("Ingrese el código de la sucursal:");
                     codigoSucursal = scanner.next();
+                    scanner.nextLine();  // consume newline
                     System.out.println("Ingrese el código del camión a eliminar:");
                     codigoCamion = scanner.next();
+                    scanner.nextLine();  // consume newline
                     for (Sucursal sucursal : empresa.getSucursales()) {
                         if (sucursal.getCodigo().equals(codigoSucursal)) {
                             sucursal.eliminarCamion(codigoCamion);
