@@ -26,9 +26,18 @@ public class Empresa {
 
     // Método para mostrar las sucursales
     public void mostrarSucursales() {
+        int i = 1;
         for (Sucursal sucursal : this.sucursales) {
+            System.out.println("Sucursal " + i + ":");
             System.out.println("Código: " + sucursal.getCodigo());
             System.out.println("Región: " + sucursal.getRegion());
+            if (sucursal.getCamiones().isEmpty()) {
+                System.out.println("No hay camiones");
+            } else {
+                System.out.println("Camiones: " + sucursal.getCamiones().size());
+            }
+            System.out.println();
+            i++;
         }
     }
 }

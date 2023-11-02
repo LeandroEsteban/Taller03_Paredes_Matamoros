@@ -4,43 +4,28 @@ public class Camion {
     private String descripcion;
     private String estado;
 
-    public Camion(String codigo, String patente, String descripcion) {
-        this.codigoCamion = codigo;
+    // Constructor para crear un camión con un código, patente, descripción y estado
+    public Camion(String codigoCamion, String patente, String descripcion, String estado) {
+        this.codigoCamion = codigoCamion;
         this.patente = patente;
         this.descripcion = descripcion;
-        this.estado = "OUT OF SERVICE";
+        this.estado = estado;
     }
 
-    // getters y setters
-    public String getCodigo() {
-        return codigoCamion;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigoCamion = codigo;
+    // Getters y setters
+    public String getCodigoCamion() {
+        return this.codigoCamion;
     }
 
     public String getPatente() {
-        return patente;
-    }
-
-    public void setPatente(String patente) {
-        this.patente = patente;
+        return this.patente;
     }
 
     public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        return this.descripcion;
     }
 
     public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
+        return this.estado;
     }
 }
