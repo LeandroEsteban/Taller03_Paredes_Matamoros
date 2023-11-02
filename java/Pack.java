@@ -6,7 +6,7 @@ public class Pack {
 	private String codigoPack;
 	private List<Productos> productos = new ArrayList<>();
 
-	public Pack(int codigoPack, int productos) {
+	public Pack(String codigoPack, List<Productos> productos ) {
 		this.codigoPack = codigoPack;
 		this.productos = productos;
 	}
@@ -17,6 +17,29 @@ public class Pack {
 			System.out.println("El pack está completo, no se pueden agregar más productos.");
 		}
 	}
+
+	public static Pack agregarPack(Scanner scanner) {
+		System.out.println("Ingrese el código del paquete:");
+		String codigoPack = scanner.next();
+		scanner.nextLine();
+
+		List<Productos> productos = new ArrayList<>();
+		int productosPorPack = 20;
+
+		for (int i = 0; i < productosPorPack; i++) {
+			System.out.println("Ingrese el código del producto:");
+			String codigoProducto = scanner.next();
+			scanner.nextLine();
+			System.out.println("Ingrese el tipo del producto:");
+			String tipoProducto = scanner.nextLine();
+
+			Productos producto = new Productos(codigoProducto, tipoProducto);
+			productos.add(producto);
+		}
+
+		return new Pack(codigoPack, productos);
+	}
+
 
 	public List<Productos> getProductos() {
 		return productos;
