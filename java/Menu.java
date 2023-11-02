@@ -11,8 +11,8 @@ public class Menu {
             System.out.println("2. Mostrar camiones de las sucursales");
             System.out.println("3. Agregar camión");
             System.out.println("4. Eliminar camión");
-            System.out.println("5. Añadir flete a un camión");
-            System.out.println("6. Salir");
+            System.out.println("5. Salir");
+
 
             String opcionStr = scanner.nextLine();
             int opcion = 0;
@@ -42,13 +42,13 @@ public class Menu {
                 case 3:
                     System.out.println("Ingrese el código de la sucursal:");
                     String codigoSucursal = scanner.next();
-                    scanner.nextLine();  // consume newline
+                    scanner.nextLine();  
                     System.out.println("Ingrese el código del camión:");
                     String codigoCamion = scanner.next();
-                    scanner.nextLine();  // consume newline
+                    scanner.nextLine(); 
                     System.out.println("Ingrese la patente del camión:");
                     String patente = scanner.next();
-                    scanner.nextLine();  // consume newline
+                    scanner.nextLine();  
                     System.out.println("Ingrese la descripción del camión:");
                     String descripcion = scanner.nextLine();
                     for (Sucursal sucursal : empresa.getSucursales()) {
@@ -61,6 +61,7 @@ public class Menu {
                 case 4:
                     System.out.println("Ingrese el código de la sucursal:");
                     codigoSucursal = scanner.next();
+
                     scanner.nextLine();
                     System.out.println("Ingrese el código del camión a eliminar:");
                     codigoCamion = scanner.next();
@@ -73,12 +74,12 @@ public class Menu {
                     }
                     break;
 
-                case 6:
+                case 5:
                     return;
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
-
             }
         }
     }
 }
+

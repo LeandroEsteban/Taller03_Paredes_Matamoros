@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Camion {
 	private String codigoCamion;
@@ -33,5 +34,4 @@ public class Camion {
 		flete.agregarPack(packs);
 		fletes.add(flete);
 	}
-
 }

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Sucursal {
+
 	private String codigo;
 	private String region;
 	private ArrayList<Camion> camiones;
@@ -26,3 +27,4 @@ public class Sucursal {
 		this.camiones.removeIf(camion -> camion.getCodigoCamion().equals(codigoCamion));
 	}
 }
+
