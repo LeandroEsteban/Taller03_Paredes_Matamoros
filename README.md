@@ -1,6 +1,6 @@
 # Taller03_Paredes_Matamoros
 
-Liata de clases identificadas y sus relaciones
+Lista de clases identificadas y sus relaciones
 
 # Clase 1: Empresa
 
@@ -46,3 +46,6 @@ Existe una relacion de composicion entre  pack y producto.
 Tiene como atributos: Codigo de producto, tipo de producto.
 
 Relacion: Un producto pertenece a un solo pack
+
+# Diagrama de clases:
+![Captura de pantalla 2023-11-02 095500](https://github.com/LeandroEsteban/Taller03_Paredes_Matamoros/assets/142464955/c6c797cc-0053-4102-be61-f25ccaf08b47)
